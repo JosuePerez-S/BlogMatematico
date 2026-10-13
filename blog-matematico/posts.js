@@ -8,7 +8,7 @@ const publicaciones = [
   },
  {
     id: "02pn",
-    titulo: "Productosnotables",
+    titulo: "TITULOS",
     archivo: "menuBlog.js",
     fecha: "2026-10-013",
     resumen: "Productos notables y sus algoritmos de resolución."
