@@ -1,3 +1,0 @@
-# BlogMatematico
-# BlogMatematico
-# BlogMatematico
