@@ -1,0 +1,233 @@
+# Guía de Resolución: Ejercicios 81 al 128
+
+---
+
+## 📈 Graficación de Ecuaciones Lineales (Ejercicios 81 al 88)
+
+### Ejercicio 81
+- **Problema:** $x - y = 0$
+- **Método:** Forma pendiente-intersección ($y = mx + b$)
+- **Desarrollo:**
+  $$y = x$$
+  $$\text{Pendiente } m = 1, \quad \text{Corte en } y: (0,0)$$
+  $$\text{Evaluar otro punto: Si } x = 3, \quad y = 3$$
+- **Resultado:** Puntos a graficar en $(0,0)$ y $(3,3)$
+
+### Ejercicio 82
+- **Problema:** $x + 4y = -8$
+- **Método:** Forma pendiente-intersección
+- **Desarrollo:**
+  $$4y = -x - 8 \implies y = -\frac{1}{4}x - 2$$
+  $$\text{Corte en } y: (0,-2), \quad \text{Pendiente } m = -\frac{1}{4}$$
+  $$\text{Evaluar otro punto: Si } x = 4, \quad y = -1 - 2 = -3$$
+- **Resultado:** Puntos a graficar en $(0,-2)$ y $(4,-3)$
+
+### Ejercicio 83
+- **Problema:** $7x + y = 2$
+- **Método:** Forma pendiente-intersección
+- **Desarrollo:**
+  $$y = -7x + 2$$
+  $$\text{Corte en } y: (0,2), \quad \text{Pendiente } m = -7$$
+  $$\text{Evaluar otro punto: Si } x = 1, \quad y = -7(1) + 2 = -5$$
+- **Resultado:** Puntos a graficar en $(0,2)$ y $(1,-5)$
+
+### Ejercicio 84
+- **Problema:** $2x - y = -1$
+- **Método:** Forma pendiente-intersección
+- **Desarrollo:**
+  $$-y = -2x - 1 \implies y = 2x + 1$$
+  $$\text{Corte en } y: (0,1), \quad \text{Pendiente } m = 2$$
+  $$\text{Evaluar otro punto: Si } x = 1, \quad y = 3$$
+- **Resultado:** Puntos a graficar en $(0,1)$ y $(1,3)$
+
+### Ejercicio 85
+- **Problema:** $x - y = -1$
+- **Método:** Forma pendiente-intersección
+- **Desarrollo:**
+  $$-y = -x - 1 \implies y = x + 1$$
+  $$\text{Corte en } y: (0,1), \quad \text{Pendiente } m = 1$$
+- **Resultado:** Puntos a graficar en $(0,1)$ y $(2,3)$
+
+### Ejercicio 86
+- **Problema:** $x + 5y = 0$
+- **Método:** Forma pendiente-intersección
+- **Desarrollo:**
+  $$5y = -x \implies y = -\frac{1}{5}x$$
+  $$\text{Corte en el origen: } (0,0), \quad \text{Pendiente } m = -\frac{1}{5}$$
+- **Resultado:** Puntos a graficar en $(0,0)$ y $(5,-1)$
+
+### Ejercicio 87
+- **Problema:** $6x - 5y = 25$
+- **Método:** Forma pendiente-intersección
+- **Desarrollo:**
+  $$-5y = -6x + 25 \implies y = \frac{6}{5}x - 5$$
+  $$\text{Corte en } y: (0,-5), \quad \text{Pendiente } m = \frac{6}{5}$$
+- **Resultado:** Puntos a graficar en $(0,-5)$ y $(5,1)$
+
+### Ejercicio 88
+- **Problema:** $7x + y = -3$
+- **Método:** Forma pendiente-intersección
+- **Desarrollo:**
+  $$y = -7x - 3$$
+  $$\text{Corte en } y: (0,-3), \quad \text{Pendiente } m = -7$$
+- **Resultado:** Puntos a graficar en $(0,-3)$ y $(1,-10)$
+
+---
+
+## 🔢 Resolución de Ecuaciones Lineales (Ejercicios 89 al 104)
+
+### Ejercicio 89
+- **Problema:** $-30 + 6x = -8(-6 - 4x)$
+- **Método:** Propiedad distributiva y despeje lineal
+- **Desarrollo:**
+  $$-30 + 6x = 48 + 32x$$
+  $$6x - 32x = 48 + 30$$
+  $$-26x = 78 \implies x = \frac{78}{-26}$$
+- **Resultado:** `x = -3`
+
+### Ejercicio 90
+- **Problema:** $-3(1 - 6m) = -3 - m$
+- **Método:** Propiedad distributiva y despeje lineal
+- **Desarrollo:**
+  $$-3 + 18m = -3 - m$$
+  $$18m + m = -3 + 3$$
+  $$19m = 0 \implies m = 0$$
+- **Resultado:** `m = 0`
+
+### Ejercicio 91
+- **Problema:** $x - 8(x - 2) = 11 - 8x$
+- **Método:** Simplificación de paréntesis y agrupación
+- **Desarrollo:**
+  $$x - 8x + 16 = 11 - 8x$$
+  $$-7x + 16 = 11 - 8x$$
+  $$-7x + 8x = 11 - 16$$
+- **Resultado:** `x = -5`
+
+### Ejercicio 92
+- **Problema:** $10 - 8x = 6x + 2(6x - 8)$
+- **Método:** Propiedad distributiva y despeje lineal
+- **Desarrollo:**
+  $$10 - 8x = 6x + 12x - 16$$
+  $$10 - 8x = 18x - 16$$
+  $$10 + 16 = 18x + 8x \implies 26 = 26x$$
+- **Resultado:** `x = 1`
+
+### Ejercicio 93
+- **Problema:** $7 + 3n = -4 + 4(n + 3)$
+- **Método:** Expandir y simplificar
+- **Desarrollo:**
+  $$7 + 3n = -4 + 4n + 12$$
+  $$7 + 3n = 4n + 8$$
+  $$7 - 8 = 4n - 3n$$
+- **Resultado:** `n = -1`
+
+### Ejercicio 94
+- **Problema:** $2 + 5x = 2(8x + 1)$
+- **Método:** Expandir y simplificar
+- **Desarrollo:**
+  $$2 + 5x = 16x + 2$$
+  $$5x = 16x \implies -11x = 0$$
+- **Resultado:** `x = 0`
+
+### Ejercicio 95
+- **Problema:** $-1 - 3(1 + 5k) = -26 + 7k$
+- **Método:** Propiedad distributiva y despeje
+- **Desarrollo:**
+  $$-1 - 3 - 15k = -26 + 7k$$
+  $$-4 - 15k = -26 + 7k$$
+  $$-4 + 26 = 7k + 15k \implies 22 = 22k$$
+- **Resultado:** `k = 1`
+
+### Ejercicio 96
+- **Problema:** $-20 + x = 6x - 5(6x - 1)$
+- **Método:** Propiedad distributiva y despeje
+- **Desarrollo:**
+  $$-20 + x = 6x - 30x + 5$$
+  $$-20 + x = -24x + 5$$
+  $$x + 24x = 5 + 20 \implies 25x = 25$$
+- **Resultado:** `x = 1`
+
+### Ejercicio 97
+- **Problema:** $\frac{493}{32} - \frac{13}{8}x = -\frac{7}{4}\left(-\frac{11}{6}x + \frac{29}{8}\right)$
+- **Método:** Eliminación de denominadores por MCM
+- **Desarrollo:**
+  $$\frac{493}{32} - \frac{13}{8}x = \frac{77}{24}x - \frac{203}{32}$$
+  $$\text{Multiplicar todo por } 96:$$
+  $$1479 - 156x = 308x - 609$$
+  $$1479 + 609 = 308x + 156x \implies 2088 = 464x$$
+- **Resultado:** `x = 9/2`
+
+### Ejercicio 98
+- **Problema:** $\frac{5}{3} + x = -\frac{7}{6}\left(x - \frac{9}{5}\right)$
+- **Método:** Eliminación de denominadores
+- **Desarrollo:**
+  $$\frac{5}{3} + x = -\frac{7}{6}x + \frac{21}{10}$$
+  $$\text{Multiplicar todo por } 30:$$
+  $$50 + 30x = -35x + 63$$
+  $$65x = 13 \implies x = \frac{13}{65}$$
+- **Resultado:** `x = 1/5`
+
+### Ejercicio 99
+- **Problema:** $-\frac{96}{35} - \frac{4}{3}p = \frac{24}{7}\left(\frac{14}{3}p - \frac{4}{5}\right)$
+- **Método:** Cancelación de términos iguales
+- **Desarrollo:**
+  $$-\frac{96}{35} - \frac{4}{3}p = 16p - \frac{96}{35}$$
+  $$-\frac{4}{3}p = 16p \implies 16p + \frac{4}{3}p = 0$$
+- **Resultado:** `p = 0`
+
+### Ejercicio 100
+- **Problema:** $-\frac{11}{4}\left(-\frac{1}{2}x + 1\right) = -\frac{5}{4} + \frac{3}{8}x$
+- **Método:** Eliminación de denominadores
+- **Desarrollo:**
+  $$\frac{11}{8}x - \frac{11}{4} = -\frac{5}{4} + \frac{3}{8}x$$
+  $$\text{Multiplicar todo por } 8:$$
+  $$11x - 22 = -10 + 3x$$
+  $$8x = 12 \implies x = \frac{12}{8}$$
+- **Resultado:** `x = 3/2`
+
+### Ejercicio 101
+- **Problema:** $-\frac{3}{2}r - \frac{317}{48} = -\frac{19}{8}\left(r + \frac{10}{3}\right)$
+- **Método:** Eliminación de denominadores por MCM
+- **Desarrollo:**
+  $$-\frac{3}{2}r - \frac{317}{48} = -\frac{19}{8}r - \frac{95}{12}$$
+  $$\text{Multiplicar todo por } 48:$$
+  $$-72r - 317 = -114r - 380$$
+  $$42r = -63 \implies r = -\frac{63}{42}$$
+- **Resultado:** `r = -3/2`
+
+### Ejercicio 102
+- **Problema:** $-\frac{7}{6}\left(r + \frac{13}{7}\right) = -\frac{103}{30} + 2r$
+- **Método:** Eliminación de denominadores por MCM
+- **Desarrollo:**
+  $$-\frac{7}{6}r - \frac{13}{6} = -\frac{103}{30} + 2r$$
+  $$\text{Multiplicar todo por } 30:$$
+  $$-35r - 65 = -103 + 60r$$
+  $$38 = 95r \implies r = \frac{38}{95}$$
+- **Resultado:** `r = 2/5`
+
+### Ejercicio 103
+- **Problema:** $\frac{13}{7}\left(p + \frac{17}{8}\right) = \frac{23}{5}p + \frac{241}{280}$
+- **Método:** Eliminación de denominadores por MCM
+- **Desarrollo:**
+  $$\frac{13}{7}p + \frac{221}{56} = \frac{23}{5}p + \frac{241}{280}$$
+  $$\text{Multiplicar todo por } 280:$$
+  $$520p + 1105 = 1288p + 241$$
+  $$864 = 768p \implies p = \frac{864}{768}$$
+- **Resultado:** `p = 9/8`
+
+### Ejercicio 104
+- **Problema:** $-\frac{7}{6}n + \frac{7}{75} = -\frac{7}{5}\left(\frac{1}{2}n - \frac{2}{5}\right)$
+- **Método:** Eliminación de denominadores por MCM
+- **Desarrollo:**
+  $$-\frac{7}{6}n + \frac{7}{75} = -\frac{7}{10}n + \frac{14}{25}$$
+  $$\text{Multiplicar todo por } 150:$$
+  $$-175n + 14 = -105n + 84$$
+  $$-70 = 70n \implies n = -1$$
+- **Resultado:** `n = -1`
+
+---
+
+## ⏱️ Problemas de Trabajo Colaborativo (Ejercicios 105 al 112)
+
+### Ejercicio 105
+- **Problema:** Nor
