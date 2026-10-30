@@ -19,5 +19,12 @@ const publicaciones = [
     archivo: "entradas/factorizacion2.js",
     fecha: "2026-10-08",
     resumen: "Factorización de trinomios y sus métodos."
+  },
+  {
+    id: "04pn",
+    titulo: "Ecuaciones de Primer Grado",
+    archivo: "entradas/ecuacion1ergdo.js",
+    fecha: "2026-10-08",
+    resumen: "Ecuaciones de Primer Grado"
   }
 ];
