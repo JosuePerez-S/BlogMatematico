@@ -1,31 +1,234 @@
 <!DOCTYPE html>
 <html lang="es">
+
+<body>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="titulo-pagina">Cargando... - Blog Matemático</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --tierra: #7a5230;
+            --pasto: #5fa83a;
+            --pasto-oscuro: #3f7a25;
+            --piedra: #c6c6c6;
+            --piedra-media: #8b8b8b;
+            --piedra-oscura: #555555;
+            --tinta: #373737;
+            --obsidiana: #1b1b1b;
+            --pergamino: #e9d9a8;
+            --pergamino-oscuro: #b79c5e;
+            --oro: #ffff55;
+            --fuente-titulo: 'Press Start 2P', 'Courier New', monospace;
+            --fuente-texto: 'VT323', 'Courier New', monospace;
+        }
+
+        html {
+            background-color: var(--tierra);
+            background-image:
+                linear-gradient(var(--pasto) 0 16px, var(--pasto-oscuro) 16px 24px, transparent 24px),
+                conic-gradient(rgba(0,0,0,0) 25%, rgba(0,0,0,.14) 0 50%, rgba(0,0,0,0) 0 75%, rgba(255,255,255,.05) 0),
+                conic-gradient(rgba(255,255,255,.06) 25%, rgba(0,0,0,0) 0 50%, rgba(0,0,0,.10) 0 75%, rgba(0,0,0,0) 0);
+            background-size: 100% 24px, 32px 32px, 56px 56px;
+            background-repeat: no-repeat, repeat, repeat;
+            image-rendering: pixelated;
+            min-height: 100%;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: var(--fuente-texto);
+            font-size: 24px;
+            line-height: 1.35;
             max-width: 700px;
-            margin: 20px auto;
-            padding: 10px;
-            color: #222;
+            margin: 48px auto 40px;
+            padding: 20px;
+            color: var(--tinta);
+            background-color: var(--piedra);
+            border: 4px solid var(--obsidiana);
+            box-shadow:
+                inset 4px 4px 0 #ffffff,
+                inset -4px -4px 0 var(--piedra-media),
+                8px 8px 0 rgba(0,0,0,.45);
         }
+
         header {
-            border-bottom: 2px solid #1a5276;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            border-bottom: 4px solid var(--piedra-oscura);
+            box-shadow: 0 4px 0 #ffffff;
+            padding-bottom: 14px;
+            margin-bottom: 24px;
         }
+
+        header h1 {
+            font-family: var(--fuente-titulo);
+            font-size: clamp(14px, 3.4vw, 22px);
+            line-height: 1.6;
+            color: #ffffff;
+            text-shadow: 3px 3px 0 var(--tinta);
+            margin: 16px 0 12px;
+            padding: 22px 16px 16px;
+            background-color: var(--tierra);
+            background-image:
+                conic-gradient(rgba(0,0,0,0) 25%, rgba(0,0,0,.16) 0 50%, rgba(0,0,0,0) 0 75%, rgba(255,255,255,.06) 0);
+            background-size: 16px 16px;
+            border: 4px solid var(--obsidiana);
+            border-top: 14px solid var(--pasto);
+            box-shadow:
+                inset 0 4px 0 var(--pasto-oscuro),
+                inset -4px -4px 0 rgba(0,0,0,.3);
+        }
+
+        /* Botón de piedra */
         .volver {
-            color: #2980b9;
+            display: inline-block;
+            font-size: 22px;
+            color: #f0f0f0;
+            text-shadow: 2px 2px 0 var(--tinta);
             text-decoration: none;
-            font-weight: bold;
+            font-weight: normal;
+            padding: 6px 16px;
+            background-color: #7d7d7d;
+            border: 4px solid var(--obsidiana);
+            box-shadow:
+                inset 4px 4px 0 #b5b5b5,
+                inset -4px -4px 0 #4a4a4a;
+        }
+
+        .volver:hover {
+            color: var(--oro);
+            background-color: #6e7ab8;
+            box-shadow:
+                inset 4px 4px 0 #a7b0e0,
+                inset -4px -4px 0 #3d4575;
+        }
+
+        .volver:active {
+            box-shadow:
+                inset 4px 4px 0 #4a4a4a,
+                inset -4px -4px 0 #b5b5b5;
+        }
+
+        small {
+            display: inline-block;
+            font-size: 20px;
+            color: var(--tinta);
+        }
+
+        /* El contenido de la entrada se lee como un libro */
+        main {
+            background-color: var(--pergamino);
+            background-image:
+                repeating-linear-gradient(0deg, rgba(120,90,40,.07) 0 4px, rgba(0,0,0,0) 4px 32px);
+            color: #2b2112;
+            padding: 20px 22px;
+            border: 4px solid #3b2a14;
+            box-shadow:
+                inset 4px 4px 0 rgba(255,255,255,.45),
+                inset -4px -4px 0 var(--pergamino-oscuro),
+                4px 4px 0 rgba(0,0,0,.35);
+            overflow-x: auto;
+        }
+
+        main h2, main h3, main h4 {
+            font-family: var(--fuente-titulo);
+            line-height: 1.6;
+            color: #2b2112;
+            margin: 28px 0 12px;
+        }
+
+        main h2 { font-size: 15px; border-bottom: 4px solid var(--pergamino-oscuro); padding-bottom: 8px; }
+        main h3 { font-size: 13px; }
+        main h4 { font-size: 11px; }
+
+        main > :first-child { margin-top: 0; }
+
+        main p, main li { font-size: 24px; }
+
+        main ul, main ol { padding-left: 28px; }
+
+        main strong, main b { color: #7a2a12; font-weight: normal; text-shadow: 1px 0 0 #7a2a12; }
+
+        main a { color: #1f4f9a; }
+        main a:hover { color: #b3470f; }
+
+        main code, main pre {
+            font-family: var(--fuente-texto);
+            font-size: 22px;
+            background-color: #2b2b2b;
+            color: #55ff55;
+            border: 2px solid var(--obsidiana);
+        }
+
+        main code { padding: 0 6px; }
+
+        main pre {
+            padding: 12px 14px;
+            overflow-x: auto;
+            box-shadow: inset 4px 4px 0 rgba(0,0,0,.4);
+        }
+
+        main pre code { border: 0; padding: 0; }
+
+        main blockquote {
+            margin: 16px 0;
+            padding: 8px 16px;
+            background-color: rgba(120,90,40,.15);
+            border-left: 8px solid var(--pasto);
+        }
+
+        main table {
+            border-collapse: collapse;
+            margin: 16px 0;
+            background-color: rgba(255,255,255,.35);
+        }
+
+        main th, main td {
+            border: 3px solid #3b2a14;
+            padding: 6px 12px;
+            font-size: 22px;
+        }
+
+        main th {
+            background-color: var(--pergamino-oscuro);
+            color: #fff;
+            text-shadow: 2px 2px 0 #3b2a14;
+            font-weight: normal;
+        }
+
+        main img, main svg, main canvas {
+            max-width: 100%;
+            image-rendering: pixelated;
+            border: 4px solid var(--obsidiana);
+        }
+
+        main hr {
+            border: 0;
+            height: 4px;
+            background-color: var(--pergamino-oscuro);
+        }
+
+        main button, main input, main select {
+            font-family: var(--fuente-texto);
+            font-size: 22px;
+            border-radius: 0;
+        }
+
+        :focus-visible {
+            outline: 4px solid #1f4f9a;
+            outline-offset: 2px;
+        }
+
+        @media (max-width: 760px) {
+            body {
+                margin: 40px 10px 24px;
+                padding: 14px;
+            }
+            main { padding: 14px; }
         }
     </style>
 </head>
-<body>
-
     <header>
         <a href="index.html" class="volver">← Volver al índice</a>
         <h1 id="titulo-entrada">Cargando título...</h1>

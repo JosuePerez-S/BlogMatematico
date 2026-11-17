@@ -4,95 +4,218 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Matemático Interactivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --tierra: #7a5230;
+            --tierra-oscura: #5a3d26;
+            --pasto: #5fa83a;
+            --pasto-oscuro: #3f7a25;
+            --piedra: #c6c6c6;
+            --piedra-media: #8b8b8b;
+            --piedra-oscura: #555555;
+            --tinta: #373737;
+            --obsidiana: #1b1b1b;
+            --madera: #b08a54;
+            --madera-oscura: #3b2a14;
+            --oro: #ffff55;
+            --esmeralda: #55ff55;
+            --redstone: #ff5555;
+            --fuente-titulo: 'Press Start 2P', 'Courier New', monospace;
+            --fuente-texto: 'VT323', 'Courier New', monospace;
+        }
+
+        html {
+            background-color: var(--tierra);
+            background-image:
+                linear-gradient(var(--pasto) 0 16px, var(--pasto-oscuro) 16px 24px, transparent 24px),
+                conic-gradient(rgba(0,0,0,0) 25%, rgba(0,0,0,.14) 0 50%, rgba(0,0,0,0) 0 75%, rgba(255,255,255,.05) 0),
+                conic-gradient(rgba(255,255,255,.06) 25%, rgba(0,0,0,0) 0 50%, rgba(0,0,0,.10) 0 75%, rgba(0,0,0,0) 0);
+            background-size: 100% 24px, 32px 32px, 56px 56px;
+            background-repeat: no-repeat, repeat, repeat;
+            image-rendering: pixelated;
+            min-height: 100%;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: var(--fuente-texto);
+            font-size: 22px;
+            line-height: 1.3;
             max-width: 700px;
-            margin: 20px auto;
-            padding: 10px;
-            color: #222;
+            margin: 48px auto 40px;
+            padding: 20px;
+            color: var(--tinta);
+            background-color: var(--piedra);
+            border: 4px solid var(--obsidiana);
+            box-shadow:
+                inset 4px 4px 0 #ffffff,
+                inset -4px -4px 0 var(--piedra-media),
+                8px 8px 0 rgba(0,0,0,.45);
         }
 
         h1 {
-            color: #1a5276;
+            font-family: var(--fuente-titulo);
+            font-size: clamp(14px, 3.6vw, 22px);
+            line-height: 1.6;
+            color: #ffffff;
+            text-shadow: 3px 3px 0 var(--tinta);
             cursor: pointer;
-            border-bottom: 2px solid #1a5276;
-            padding-bottom: 5px;
+            margin: 0 0 8px;
+            padding: 22px 16px 16px;
+            background-color: var(--tierra);
+            background-image:
+                conic-gradient(rgba(0,0,0,0) 25%, rgba(0,0,0,.16) 0 50%, rgba(0,0,0,0) 0 75%, rgba(255,255,255,.06) 0);
+            background-size: 16px 16px;
+            border: 4px solid var(--obsidiana);
+            border-top: 14px solid var(--pasto);
+            box-shadow:
+                inset 0 4px 0 var(--pasto-oscuro),
+                inset -4px -4px 0 rgba(0,0,0,.3);
+            user-select: none;
+        }
+
+        h1:hover {
+            color: var(--oro);
         }
 
         .subtitulo {
-            font-size: 18px;
-            color: #2980b9;
-            margin-top: 25px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
+            font-family: var(--fuente-titulo);
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--tinta);
+            margin-top: 32px;
+            padding-bottom: 10px;
+            border-bottom: 4px solid var(--piedra-oscura);
+            box-shadow: 0 4px 0 #ffffff;
         }
 
         p {
-            font-size: 16px;
-            background-color: #f2f2f2;
-            padding: 10px;
-            border-radius: 4px;
+            font-size: 22px;
+            color: #f0f0f0;
+            text-shadow: 2px 2px 0 var(--tinta);
+            background-color: var(--piedra-media);
+            padding: 10px 12px;
+            border-radius: 0;
+            border: 4px solid var(--obsidiana);
+            box-shadow:
+                inset 4px 4px 0 var(--piedra-oscura),
+                inset -4px -4px 0 #b5b5b5;
         }
 
-        /* Lista de entradas cargadas dinámicamente */
+        /* Botón de piedra, estilo menú de Minecraft */
+        p[onclick] {
+            text-align: center;
+            background-color: #7d7d7d;
+            box-shadow:
+                inset 4px 4px 0 #b5b5b5,
+                inset -4px -4px 0 #4a4a4a;
+            transition: none;
+        }
+
+        p[onclick]:hover {
+            color: var(--oro);
+            background-color: #6e7ab8;
+            box-shadow:
+                inset 4px 4px 0 #a7b0e0,
+                inset -4px -4px 0 #3d4575;
+        }
+
+        p[onclick]:active {
+            box-shadow:
+                inset 4px 4px 0 #4a4a4a,
+                inset -4px -4px 0 #b5b5b5;
+        }
+
+        /* Lista de entradas cargadas dinámicamente: carteles de madera */
         #lista-entradas {
             list-style-type: none;
             padding: 0;
         }
 
         #lista-entradas li {
-            background-color: #fafafa;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            padding: 15px;
-            margin-bottom: 12px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: var(--madera);
+            background-image:
+                repeating-linear-gradient(0deg, rgba(0,0,0,.10) 0 4px, rgba(0,0,0,0) 4px 24px),
+                repeating-linear-gradient(90deg, rgba(255,255,255,.07) 0 4px, rgba(0,0,0,0) 4px 40px);
+            border: 4px solid var(--madera-oscura);
+            border-radius: 0;
+            padding: 15px 16px;
+            margin-bottom: 14px;
+            box-shadow:
+                inset 4px 4px 0 rgba(255,255,255,.28),
+                inset -4px -4px 0 rgba(0,0,0,.28),
+                4px 4px 0 rgba(0,0,0,.35);
+            transition: transform 0.1s steps(2);
         }
 
         #lista-entradas li:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transform: translate(-2px, -2px);
+            border-color: var(--obsidiana);
+            box-shadow:
+                inset 4px 4px 0 rgba(255,255,255,.4),
+                inset -4px -4px 0 rgba(0,0,0,.28),
+                6px 6px 0 rgba(0,0,0,.4);
         }
 
         #lista-entradas a {
-            color: #1a5276;
+            font-family: var(--fuente-titulo);
+            color: #ffffff;
+            text-shadow: 2px 2px 0 var(--madera-oscura);
             text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 13px;
+            line-height: 1.6;
+            font-weight: normal;
         }
 
         #lista-entradas a:hover {
-            color: #2980b9;
+            color: var(--oro);
             text-decoration: underline;
         }
 
         .fecha-post {
             display: inline-block;
-            font-size: 12px;
-            color: #7f8c8d;
+            font-size: 18px;
+            color: var(--madera-oscura);
             margin-left: 8px;
         }
 
         .resumen-post {
-            margin: 8px 0 0 0;
-            background-color: transparent;
-            padding: 0;
-            font-size: 14px;
-            color: #555;
+            margin: 10px 0 0 0;
+            background-color: rgba(0,0,0,.18);
+            border: 0;
+            box-shadow: none;
+            padding: 6px 10px;
+            font-size: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 0 var(--madera-oscura);
         }
 
-        /* Clases auxiliares para elementos interactivos */
+        /* Clases auxiliares para elementos interactivos: inventario */
         ul.interactivo {
-            background-color: #fafafa;
-            padding: 15px 30px;
-            border: 1px solid #ddd;
+            background-color: var(--piedra-media);
+            padding: 12px 14px;
+            list-style: none;
+            border: 4px solid var(--obsidiana);
+            box-shadow:
+                inset 4px 4px 0 var(--piedra-oscura),
+                inset -4px -4px 0 #b5b5b5;
         }
 
         ul.interactivo li {
-            margin: 5px 0;
+            margin: 6px 0;
             cursor: pointer;
-            padding: 4px;
+            padding: 6px 10px;
+            color: #ffffff;
+            text-shadow: 2px 2px 0 var(--tinta);
+            background-color: rgba(0,0,0,.25);
+            border: 2px solid var(--piedra-oscura);
+        }
+
+        ul.interactivo li:hover {
+            border-color: #ffffff;
+            color: var(--oro);
         }
 
         .oculto {
@@ -100,12 +223,29 @@
         }
 
         .resaltado {
-            background-color: #d4efdf;
-            color: #196f3d;
+            background-color: #2f7d32;
+            color: var(--esmeralda);
+            border-color: var(--esmeralda);
         }
 
-        .cambio-color {
-            color: #c0392b;
+        h1.cambio-color {
+            color: var(--redstone);
+        }
+
+        :focus-visible {
+            outline: 4px solid var(--oro);
+            outline-offset: 2px;
+        }
+
+        @media (max-width: 760px) {
+            body {
+                margin: 40px 10px 24px;
+                padding: 14px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #lista-entradas li { transition: none; }
         }
     </style>
 </head>

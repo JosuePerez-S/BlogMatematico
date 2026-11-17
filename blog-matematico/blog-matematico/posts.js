@@ -26,5 +26,12 @@ const publicaciones = [
     archivo: "entradas/ecuacion1ergdo.js",
     fecha: "2026-10-08",
     resumen: "Ecuaciones de Primer Grado"
+  },
+  {
+    id: "05pn",
+    titulo: "Hola Mundo",
+    archivo: "entradas/Arquitectura.js",
+    fecha: "2026-10-08",
+    resumen: "Mars45 vs Java"
   }
 ];
