@@ -66,6 +66,16 @@ function pendiente(nombre, workshop) {
 function sumar(A, B) {
   // TODO Workshop 1
   pendiente('sumar', 'Workshop 1');
+  if (!mismoOrden(A,B)){
+    throw new Error('Para Sumar A y B Deben Tener el Mismo Orden ');
+    
+    const[filas,columnas]=orden(A);
+    const Resultante = crearMatriz(filas,columnas);
+    for(let f =0; f< filas ; f++){
+      for(let c =0; c< columnas ; c++){
+      Resultante [f][c]=A[f][c]+[f][c] ;
+       }
+  }
 }
 
 /**
@@ -75,6 +85,16 @@ function sumar(A, B) {
 function restar(A, B) {
   // TODO Workshop 1
   pendiente('restar', 'Workshop 1');
+  if (!mismoOrden(A,B)){
+    throw new Error('Para Restar A y B Deben Tener el Mismo Orden ');
+  }
+  const[filas,columnas]=orden(A);
+  const Resultante = crearMatriz(filas,columnas);
+  for(let f =0; f< filas ; f++){
+    for(let c =0; c< columnas ; c++){
+    Resultante [f][c]=A[f][c]-B[f][c] ;
+     }
+}
 }
 
 /**
@@ -84,6 +104,15 @@ function restar(A, B) {
 function escalar(k, A) {
   // TODO Workshop 1
   pendiente('escalar', 'Workshop 1');
+   const[filas,columnas]=orden(A);
+   const Resultante = crearMatriz(filas,columnas);
+   for(let f =0; f< filas ; f++){
+    for(let c =0; c< columnas ; c++){
+    Resultante [f][c]=k* [f][c] ;
+     }
+}
+
+
 }
 
 /**
@@ -95,6 +124,13 @@ function escalar(k, A) {
 function transpuesta(A) {
   // TODO Workshop 1
   pendiente('transpuesta', 'Workshop 1');
+  const[filas,columnas]=orden(A);
+   const Resultante = crearMatriz(filas,columnas);
+   for(let f =0; f< filas ; f++){
+    for(let c =0; c< columnas ; c++){
+    Resultante [c][f]=A[f][c] ;
+     }
+}
 }
 
 
@@ -107,6 +143,12 @@ function transpuesta(A) {
 function det2(T) {
   // TODO Workshop 2
   pendiente('det2', 'Workshop 2');
+  const a= T[0][0];
+  const b= T[0][1];
+  const c= T[1][0];
+  const d= T[1][1];
+  const determinante =a*d - b*c;
+  return determinante;
 }
 
 /**
@@ -146,4 +188,5 @@ function gaussJordan(aumentada) {
 function inversa2x2(T) {
   // TODO Workshop 4
   pendiente('inversa2x2', 'Workshop 4');
+}
 }
